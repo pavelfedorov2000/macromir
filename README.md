@@ -4,5 +4,5 @@ Educational platform:
 - Scss + BEM
 - Gulp (@@include)
 - jquery:
-  -fancybox gallery
+  - fancybox gallery
   - ion-range-slider filter
