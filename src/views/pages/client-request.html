@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../_head.html', {
+"title": "Заявка клиент"
+})
+
+<body>
+
+    <div class="wrapper">
+
+        <main class="page client-request">
+            <section class="steps">
+                <div class="container">
+                    <h1 class="page-title steps__title">
+                        Биржа заявок
+                    </h1>
+                    @@include('../../blocks/modules/steps/_steps.html')
+
+                    <button class="btn steps__search-btn">
+                        Найти исполнителя
+                    </button>
+                </div>
+            </section>
+
+            <div class="client-request__body">
+                <div class="container">
+                    <div class="client-request__tabs tabs">
+                        <a href="#client-request-tab-1" class="tab client-request__tab tab--active">
+                            Все
+                            <span>1</span>
+                        </a>
+                        <a href="#client-request-tab-2" class="tab client-request__tab">
+                            Архив
+                            <span>1</span>
+                        </a>
+                        <a href="#client-request-tab-3" class="tab client-request__tab">
+                            В работе
+                            <span>1</span>
+                        </a>
+                        <a href="#client-request-tab-4" class="tab client-request__tab">
+                            Опубликованные
+                            <span>1</span>
+                        </a>
+                        <a href="#client-request-tab-5" class="tab client-request__tab">
+                            На модерации
+                            <span>1</span>
+                        </a>
+                    </div>
+
+                    <div class="client-request__wrapper">
+                        <div class="aside-filters client-request__aside-filters" data-da=".wrapper, 1023, first">
+                            <div class="aside-filters__header">
+                                <h6 class="aside-filters__title">Фильтры</h6>
+                                <button class="aside-filters__close-btn">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#close"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <form class="aside-filters__form" action="#">
+                                @@include('../../blocks/modules/aside-filters/_aside-categories.html')
+                                <fieldset class="aside-filters__item">
+                                    <legend class="aside-filters__item-title">Подкатегории</legend>
+                                    <label class="aside-filters__item-label">
+                                        <input class="filter-style" type="checkbox">
+                                        SMM и социальные сети
+                                    </label>
+                                    <label class="aside-filters__item-label">
+                                        <input class="filter-style" type="checkbox">
+                                        Ипотечное кредитование
+                                    </label>
+                                    <label class="aside-filters__item-label">
+                                        <input class="filter-style" type="checkbox">
+                                        Лидерство и мотивация
+                                    </label>
+                                    <label class="aside-filters__item-label">
+                                        <input class="filter-style" type="checkbox">
+                                        Налоги и право
+                                    </label>
+                                    <label class="aside-filters__item-label">
+                                        <input class="filter-style" type="checkbox">
+                                        Привлечение клиентов
+                                    </label>
+                                    <label class="aside-filters__item-label">
+                                        <input class="filter-style" type="checkbox">
+                                        Продажа недвижимости
+                                    </label>
+                                </fieldset>
+                                @@include('../../blocks/modules/aside-filters/_aside-price.html')
+                                <fieldset class="aside-filters__item">
+                                    <legend class="aside-filters__item-title aside-filters__range-title">
+                                        Город
+                                    </legend>
+                                    <select class="filter-style aside-filters__select" name="city" id="city">
+                                        <option value="city-1">Москва</option>
+                                        <option value="city-2">Москва</option>
+                                        <option value="city-3">Москва</option>
+                                    </select>
+                                </fieldset>
+                                <div class="aside-filters__buttons grid">
+                                    <button class="border-btn aside-filters__btn aside-filters__reset-btn"
+                                        type="reset">Сбросить</button>
+                                    <button class="btn aside-filters__btn aside-filters__apply-btn"
+                                        type="submit">Применить</button>
+                                </div>
+                            </form>
+                        </div>
+                        <button class="filter-btn client-request__filter-btn">
+                            Фильтры
+                            <span>2</span>
+                        </button>
+                        <div id="client-request-tab-1"
+                            class="tabs-content client-request__content tabs-content--active">
+                            @@include('../../blocks/modules/request-card/_client-request-card.html')
+                        </div>
+                        <div id="client-request-tab-2" class="tabs-content client-request__content">
+                            @@include('../../blocks/modules/request-card/_client-request-card.html')
+                            @@include('../../blocks/modules/request-card/_client-request-card.html')
+                        </div>
+                        <div id="client-request-tab-3" class="tabs-content client-request__content">
+                            @@include('../../blocks/modules/request-card/_client-request-card.html')
+                            @@include('../../blocks/modules/request-card/_client-request-card.html')
+                            @@include('../../blocks/modules/request-card/_client-request-card.html')
+                        </div>
+                        <div id="client-request-tab-4" class="tabs-content client-request__content">
+                            @@include('../../blocks/modules/request-card/_client-request-card.html')
+                            @@include('../../blocks/modules/request-card/_client-request-card.html')
+                            @@include('../../blocks/modules/request-card/_client-request-card.html')
+                            @@include('../../blocks/modules/request-card/_client-request-card.html')
+                        </div>
+                        <div id="client-request-tab-5" class="tabs-content client-request__content">
+                            @@include('../../blocks/modules/request-card/_client-request-card.html')
+                            @@include('../../blocks/modules/request-card/_client-request-card.html')
+                            @@include('../../blocks/modules/request-card/_client-request-card.html')
+                            @@include('../../blocks/modules/request-card/_client-request-card.html')
+                            @@include('../../blocks/modules/request-card/_client-request-card.html')
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        @@include('../../blocks/modules/popups/_popups.html')
+    </div>
+
+    @@include('../_js.html')
+
+</body>
+
+</html>

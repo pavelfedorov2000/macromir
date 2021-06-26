@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../_head.html', {
+"title": "Учебный центр"
+})
+
+<body>
+
+    <div class="wrapper">
+        <main class="page">
+            <section class="training-center">
+                <div class="container">
+                    <div class="page__top">
+                        <h1 class="page-title page__title">
+                            Учебный центр
+                        </h1>
+                        @@include('../../blocks/modules/search-form/_search-form.html')
+                    </div>
+
+                    <div class="training-center__wrapper">
+                        <div class="aside-filters training-center__aside-filters" data-da=".wrapper, 1023, first">
+                            <div class="aside-filters__header">
+                                <h6 class="aside-filters__title">Фильтры</h6>
+                                <button class="aside-filters__close-btn">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#close"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <form class="aside-filters__form" action="#">
+                                @@include('../../blocks/modules/aside-filters/_aside-categories.html')
+                                <fieldset class="aside-filters__item">
+                                    <legend class="aside-filters__item-title">спикеры</legend>
+                                    <label class="aside-filters__item-label">
+                                        <input class="filter-style" type="checkbox">
+                                        Татьяна Макурова
+                                    </label>
+                                    <label class="aside-filters__item-label">
+                                        <input class="filter-style" type="checkbox">
+                                        Сергей Ермолаев
+                                    </label>
+                                    <label class="aside-filters__item-label">
+                                        <input class="filter-style" type="checkbox">
+                                        Михаил Соколов
+                                    </label>
+                                    <label class="aside-filters__item-label">
+                                        <input class="filter-style" type="checkbox">
+                                        Эрика Шарт
+                                    </label>
+                                    <label class="aside-filters__item-label">
+                                        <input class="filter-style" type="checkbox">
+                                        Эрнест Исмагилов
+                                    </label>
+                                    <label class="aside-filters__item-label">
+                                        <input class="filter-style" type="checkbox">
+                                        Ксения Турусина
+                                    </label>
+                                    <div class="aside-filters__more-btn">
+                                        Показать всех спикеров
+                                    </div>
+                                    <div class="aside-filters__more">
+                                        <label class="aside-filters__item-label">
+                                            <input class="filter-style" type="checkbox">
+                                            Татьяна Макурова
+                                        </label>
+                                        <label class="aside-filters__item-label">
+                                            <input class="filter-style" type="checkbox">
+                                            Сергей Ермолаев
+                                        </label>
+                                        <label class="aside-filters__item-label">
+                                            <input class="filter-style" type="checkbox">
+                                            Михаил Соколов
+                                        </label>
+                                        <label class="aside-filters__item-label">
+                                            <input class="filter-style" type="checkbox">
+                                            Эрика Шарт
+                                        </label>
+                                        <label class="aside-filters__item-label">
+                                            <input class="filter-style" type="checkbox">
+                                            Эрнест Исмагилов
+                                        </label>
+                                        <label class="aside-filters__item-label">
+                                            <input class="filter-style" type="checkbox">
+                                            Ксения Турусина
+                                        </label>
+                                    </div>
+                                </fieldset>
+                                @@include('../../blocks/modules/aside-filters/_aside-price.html')
+                                <fieldset class="aside-filters__item">
+                                    <legend class="aside-filters__item-title aside-filters__range-title">
+                                        продолжительность
+                                    </legend>
+                                    <input type="range" class="js-range-slider" name="duration-range" value=""
+                                        data-min="30" data-max="180" data-from="0">
+                                </fieldset>
+                                <fieldset class="aside-filters__item">
+                                    <legend class="aside-filters__item-title">другие параметры</legend>
+                                    <label class="aside-filters__item-label">
+                                        <input class="filter-style" type="checkbox">
+                                        Новинка
+                                    </label>
+                                    <label class="aside-filters__item-label">
+                                        <input class="filter-style" type="checkbox">
+                                        Рекомендуем
+                                    </label>
+                                    <label class="aside-filters__item-label">
+                                        <input class="filter-style" type="checkbox">
+                                        До 2-х часов
+                                    </label>
+                                </fieldset>
+                                <div class="aside-filters__buttons grid">
+                                    <button class="border-btn aside-filters__btn aside-filters__reset-btn"
+                                        type="reset">Сбросить</button>
+                                    <button class="btn aside-filters__btn aside-filters__apply-btn"
+                                        type="submit">Применить</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="training-center__content">
+                            <button class="filter-btn">
+                                Фильтры
+                                <span>2</span>
+                            </button>
+                            <div class="training-center__cards">
+                                @@include('../../blocks/modules/card/training-center/_1.html')
+                                @@include('../../blocks/modules/card/training-center/_2.html')
+                                @@include('../../blocks/modules/card/training-center/_3.html')
+                                @@include('../../blocks/modules/card/training-center/_1.html')
+                                @@include('../../blocks/modules/card/training-center/_2.html')
+                                @@include('../../blocks/modules/card/training-center/_partner.html')
+                                @@include('../../blocks/modules/card/training-center/_1.html')
+                                @@include('../../blocks/modules/card/training-center/_2.html')
+                                @@include('../../blocks/modules/card/training-center/_3.html')
+                            </div>
+
+                            <nav class="pagination">
+                                <ol class="pagination__list">
+                                    <li class="pagination__item pagination__item--active">
+                                        <span>1</span>
+                                    </li>
+                                    <li class="pagination__item">
+                                        <a href="#">2</a>
+                                    </li>
+                                    <li class="pagination__item">
+                                        <a href="#">3</a>
+                                    </li>
+                                    <li class="pagination__item">
+                                        <a href="#">4</a>
+                                    </li>
+                                    <li class="pagination__item">
+                                        <a href="#">5</a>
+                                    </li>
+                                </ol>
+                                <div class="pagination__item">
+                                    <a href="#">
+                                        <svg width="6" height="9" viewBox="0 0 6 9" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 1L4.5 4.5L1 8" stroke="#F75000" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        @@include('../../blocks/modules/popups/_popups.html')
+
+    </div>
+
+    @@include('../_js.html')
+
+</body>
+
+</html>

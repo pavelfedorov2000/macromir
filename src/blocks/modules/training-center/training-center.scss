@@ -1,0 +1,48 @@
+.training-center {
+    &__wrapper {
+        @extend %flex-row;
+        align-items: flex-start;
+        grid-column-gap: 13px;
+        margin-top: 30px;
+        @media (max-width: 1023px) {
+            display: block;
+        }
+    }
+    &__aside-filters {
+        width: 227px;
+        padding: 25px 10px 35px;
+    }
+    &__content {
+        width: ($container - 227px - 13px) / $container * 100%;
+        @media (max-width: 1023px) {
+            width: 100%;
+        }
+    }
+    &__cards {
+        width: 100%;
+        @extend %flex-row;
+        flex-wrap: wrap;
+        grid-row-gap: 40px;
+        margin-bottom: 30px;
+        @media (max-width: 1023px) {
+            margin-top: 35px;
+        }
+    }
+    &__card {
+        width: 292px / 900px * 100%;
+        @media (max-width: 870px) {
+            width: 49%;
+        }
+        @media (max-width: 575px) {
+            width: 100%;
+        }
+        .card__btn {
+            font-size: 16px;
+            line-height: 22px;
+            padding: 9px;
+        }
+        .card__aside {
+            width: 37px;
+        }
+    }
+}

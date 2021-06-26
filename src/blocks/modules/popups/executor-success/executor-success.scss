@@ -1,0 +1,58 @@
+.executor-success {
+    padding: 30px 36px 60px;
+
+    // .executor-success__title
+
+    &__title {
+        margin-bottom: 52px;
+    }
+
+    // .executor-success__btn
+
+    &__btn {
+    }
+}
+.chosen-executor {
+    text-align: center;
+    padding-bottom: 36px;
+    border-bottom: 1px solid #e5e5e5;
+    // .chosen-executor__title
+
+    &__title {
+        @extend %text-20;
+    }
+
+    // .chosen-executor__img
+
+    &__img {
+        margin: 23px auto 14px;
+    }
+
+    // .chosen-executor__name
+
+    &__name {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+.start-work-info {
+    padding-top: 20px;
+    // .start-work-info__title
+
+    &__title {
+        font-weight: 600;
+        @extend %text-18;
+        color: #000000;
+        margin-bottom: 10px;
+    }
+
+    // .start-work-info__descr
+
+    &__descr {
+        @extend %text-16;
+        margin-bottom: 40px;
+        a {
+            color: $accent;
+        }
+    }
+}

@@ -1,0 +1,73 @@
+<div style="display: none;" id="speaker-popup" class="popup speaker-popup">
+    <div class="popup__inner">
+        <div class="popup__img speaker-popup__img">
+            <img src="img/speaker-popup.jpg" alt="Фото выступления спикера">
+        </div>
+        <div class="popup__content speaker-popup__content">
+            <div class="popup__content-inner">
+                <h4 class="popup__title speaker-popup__title">
+                    Хотите стать спикером и делиться своим опытом?
+                </h4>
+                <div class="popup__subtitle speaker-popup__subtitle">
+                    Заполняйте поля ниже и отправляйте нам заявку
+                </div>
+                <form class="form popup__form" action="#">
+                    <div class="popup__form-items speaker-popup__form-items">
+                        <div class="popup__form-item speaker-popup__form-item">
+                            <label for="name"
+                                class="form__label popup__form-label speaker-popup__form-label">Имя*</label>
+                            <input class="form__input popup__form-input speaker-popup__form-input" name="name">
+                        </div>
+                        <div class="popup__form-item speaker-popup__form-item">
+                            <label for="phone"
+                                class="form__label popup__form-label speaker-popup__form-label">Телефон*</label>
+                            <input class="form__input popup__form-input speaker-popup__form-input" type="tel"
+                                name="phone">
+                        </div>
+                    </div>
+                    <div class="popup__form-item speaker-popup__form-item">
+                        <label for="email"
+                            class="form__label popup__form-label speaker-popup__form-label">Почта*</label>
+                        <input class="form__input popup__form-input speaker-popup__form-input" type="email"
+                            name="email">
+                    </div>
+                    <div class="popup__form-item speaker-popup__form-item">
+                        <label for="social-links" class="form__label popup__form-label speaker-popup__form-label">
+                            Ссылки на ваши социальные сети*
+                        </label>
+                        <input class="form__input popup__form-input speaker-popup__form-input" name="socials">
+                    </div>
+                    <div class="popup__form-item speaker-popup__form-item">
+                        <label for="specialization" class="form__label popup__form-label speaker-popup__form-label">
+                            Ваша специализация*
+                        </label>
+                        <input class="form__input popup__form-input speaker-popup__form-input" name="specialization">
+                    </div>
+                    <div class="popup__form-item speaker-popup__form-item">
+                        <label for="experience" class="form__label popup__form-label speaker-popup__form-label">
+                            Ваш опыт
+                        </label>
+                        <input class="form__input popup__form-input speaker-popup__form-input" name="experience">
+                    </div>
+                    <input class="filter-style popup__form-file" name="file" type="file"
+                        data-placeholder="Прикрепить файл">
+                    <div class="popup__form-item">
+                        <label for="question" class="form__label popup__form-label speaker-popup__form-label">
+                            Ваш вопрос
+                        </label>
+                        <textarea
+                            class="form__input popup__form-input popup__form-textarea speaker-popup__form-textarea"
+                            name="question"></textarea>
+                    </div>
+                    <button class="btn form__btn popup__form-btn speaker-popup__form-btn" type="submit">
+                        Зарегистрироваться
+                    </button>
+                    <small class="form__agreement popup__form-agreement">
+                        Отправляя заявку, вы даете согласие на
+                        <a href="#">обработку персональных данных</a>
+                    </small>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

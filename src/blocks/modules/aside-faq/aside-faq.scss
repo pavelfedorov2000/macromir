@@ -1,0 +1,49 @@
+.aside-faq {
+    &__title {
+        font-size: 30px;
+        line-height: 14px;
+        font-weight: 700;
+        margin-bottom: 30px;
+        @media (max-width: 575px) {
+            font-size: 26px;
+            margin-bottom: 25px;
+        }
+    }
+    // .aside-faq__item
+
+    &__item + &__item {
+        margin-top: 15px;
+        @media (max-width: 575px) {
+            margin-top: 22px;
+        }
+    }
+
+    // .aside-faq__item-head
+
+    &__item-head {
+        line-height: 20px;
+        padding: 20px;
+        &:after {
+            right: 18px;
+        }
+        @media (max-width: 575px) {
+            padding-left: 10px;
+            padding-right: 30px;
+        }
+    }
+
+    // .aside-faq__item-content
+
+    &__item-content {
+        max-width: 408px;
+        padding: 18px 20px 10px;
+        font-size: 18px;
+        line-height: 23px;
+        @media (max-width: 575px) {
+            max-width: 100%;
+            font-size: 16px;
+            line-height: 21px;
+            padding: 7px 0 0 0;
+        }
+    }
+}

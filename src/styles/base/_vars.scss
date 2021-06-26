@@ -1,0 +1,104 @@
+// colors
+$accent: #f75000;
+$black: #333333;
+$shadow: 0px 0px 10px 1px rgba(184, 184, 184, 0.25);
+
+$container: 1140px;
+$gap: 15px;
+
+%white-bg {
+    background-color: #ffffff;
+    box-shadow: $shadow;
+}
+
+%vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+%flex-center {
+    @extend %vertical-align;
+    justify-content: center;
+}
+
+%flex-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+%flex-row-center {
+    @extend %flex-row;
+    align-items: center;
+}
+
+%flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+%flex-col-center {
+    @extend %flex-col;
+    align-items: center;
+}
+
+%pos-center-x {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+%pos-center-y {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+%pos-center-xy {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+%btn {
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.3s all;
+}
+
+%bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+%text-30 {
+    font-size: 30px;
+    line-height: 39px;
+}
+
+%text-20 {
+    font-size: 20px;
+    line-height: 27px;
+}
+
+%text-18 {
+    font-size: 18px;
+    line-height: 25px;
+}
+
+%text-16 {
+    font-size: 16px;
+    line-height: 22px;
+}
+
+%text-14 {
+    font-size: 14px;
+    line-height: 19px;
+}
+
+%text-12 {
+    font-size: 12px;
+    line-height: 16px;
+}

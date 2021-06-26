@@ -1,0 +1,101 @@
+* {
+    box-sizing: inherit;
+    &:before,
+    &:after {
+        box-sizing: inherit;
+    }
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-width: 320px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    //font-size: 18px;
+    //line-height: 25px;
+    font-weight: 400;
+    color: $black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+}
+
+ul,
+ol,
+li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+dl,
+dt {
+    margin: 0;
+}
+
+dd {
+    margin-inline-start: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+select,
+button,
+input,
+textarea {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+figure {
+    margin: 0;
+}
+
+input,
+textarea {
+    cursor: default;
+}
+
+address {
+    font-style: normal;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}

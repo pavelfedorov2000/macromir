@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../_head.html', {
+"title": "Моя учеба"
+})
+
+<body>
+    <div class="wrapper">
+        <main class="page my-study">
+            <div class="page__top">
+                <div class="container">
+                    <h1 class="page-title page__title">
+                        Моя учеба
+                    </h1>
+                    @@include('../../blocks/modules/search-form/_search-form.html')
+                </div>
+            </div>
+            <div class="my-study__content">
+                <section class="my-study__section">
+                    <div class="container">
+                        @@include('../../blocks/modules/my-study/_section-top.html', {
+                        "title": "Ближайшие события",
+                        "link": "Все ближайшие события"
+                        })
+                        <div class="my-study__cards">
+                            @@include('../../blocks/modules/card/my-study/close/_1.html')
+                            @@include('../../blocks/modules/card/my-study/close/_2.html')
+                            @@include('../../blocks/modules/card/my-study/close/_3.html')
+                            @@include('../../blocks/modules/card/my-study/close/_2.html')
+                        </div>
+                    </div>
+                </section>
+                <section class="my-study__section">
+                    <div class="container">
+                        @@include('../../blocks/modules/my-study/_section-top.html', {
+                        "title": "Начатое",
+                        "link": "Все начатые события"
+                        })
+                        <div class="my-study__cards">
+                            @@include('../../blocks/modules/card/my-study/started&finished/_1.html')
+                            @@include('../../blocks/modules/card/my-study/started&finished/_2.html')
+                            @@include('../../blocks/modules/card/my-study/started&finished/_3.html')
+                            @@include('../../blocks/modules/card/my-study/started&finished/_2.html')
+                            @@include('../../blocks/modules/card/my-study/started&finished/_delete-box.html')
+                        </div>
+                    </div>
+                </section>
+                <section class="my-study__section">
+                    <div class="container">
+                        @@include('../../blocks/modules/my-study/_section-top.html', {
+                        "title": "Пройденное",
+                        "link": "Все пройденные события"
+                        })
+                        <div class="my-study__cards">
+                            @@include('../../blocks/modules/card/my-study/started&finished/_1.html')
+                            @@include('../../blocks/modules/card/my-study/started&finished/_2.html')
+                            @@include('../../blocks/modules/card/my-study/started&finished/_3.html')
+                            @@include('../../blocks/modules/card/my-study/started&finished/_2.html')
+                            @@include('../../blocks/modules/card/my-study/started&finished/_delete-box.html')
+                        </div>
+                    </div>
+                </section>
+                <section class="my-study__section">
+                    <div class="container">
+                        @@include('../../blocks/modules/my-study/_section-top.html', {
+                        "title": "Избранное",
+                        "link": "Все избранные события"
+                        })
+                        <div class="my-study__cards">
+                            @@include('../../blocks/modules/card/my-study/favorite/_1.html')
+                            @@include('../../blocks/modules/card/my-study/favorite/_2.html')
+                            @@include('../../blocks/modules/card/my-study/favorite/_3.html')
+                            @@include('../../blocks/modules/card/my-study/favorite/_2.html')
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        @@include('../../blocks/modules/popups/_popups.html')
+
+    </div>
+
+    @@include('../_js.html')
+
+</body>
+
+</html>

@@ -1,0 +1,273 @@
+.study-program {
+    padding: 150px 0 30px;
+    @media (max-width: 991px) {
+        padding: 80px 0 22px;
+    }
+
+    &--bg {
+        position: relative;
+        background: url(../img/bg/decor-bg.svg) center (center / cover) no-repeat;
+        background-color: #f5f5f5;
+        min-height: 688px;
+        padding: 50px 0;
+        &:before,
+        &:after {
+            //content: '';
+            position: absolute;
+            top: 0;
+            //z-index: -1;
+            min-height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        &:before {
+            left: 0;
+            width: 861px / 1920px * 100%;
+            min-height: 750px / 688px * 100%;
+            background-image: url(../img/decor/decor-left.svg);
+        }
+        &:after {
+            right: 0;
+            width: 807px / 1920px * 100%;
+            min-height: 682px / 688px * 100%;
+            background-image: url(../img/decor/decor-right.svg);
+        }
+    }
+    // .study-program__items
+
+    &__items {
+        margin-top: 40px;
+        @media (max-width: 575px) {
+            margin-top: 23px;
+        }
+    }
+
+    // .study-program__item
+
+    &__item {
+        @media (max-width: 575px) {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+
+    &__item + &__item {
+        margin-top: 19px;
+        @media (max-width: 575px) {
+            margin-top: 15px;
+        }
+    }
+
+    &__item-head {
+        padding: 17px 60px 17px 30px;
+        @media (max-width: 575px) {
+            padding: 11px 30px 11px 15px;
+        }
+        &:after {
+            top: 27px;
+            right: 30px;
+            @media (max-width: 575px) {
+                @include centerY;
+                right: 15px;
+            }
+        }
+        &.accordion__item-head--active:after {
+            transform: translateY(-50%) rotate(180deg);
+        }
+    }
+
+    // .study-program__item-title
+
+    &__item-title {
+        @media (max-width: 575px) {
+            max-width: 274px / 375px * 100%;
+        }
+    }
+
+    // .study-program__item-list
+
+    &__item-list {
+        max-width: 884px + 23px + 50px;
+        padding: 30px 0 30px 50px;
+        @media (max-width: 575px) {
+            padding: 20px 0 15px;
+        }
+        li {
+            position: relative;
+            padding-left: 23px;
+            @media (max-width: 575px) {
+                padding-left: 15px;
+                font-size: 14px;
+                line-height: 19px;
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                top: 7px;
+                left: 0;
+                width: 10px;
+                height: 10px;
+                background-image: url('../img/icons/list-hex.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
+                @media (max-width: 575px) {
+                    width: 8px;
+                    height: 8px;
+                }
+            }
+        }
+        li + li {
+            margin-top: 15px;
+        }
+    }
+
+    &__cards {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 50px 30px;
+        margin: 45px 0 50px;
+        @media (max-width: 680px) {
+            grid-template-columns: 100%;
+            margin: 25px 0;
+        }
+    }
+
+    &__card-img {
+        @media (max-width: 680px) {
+            width: 100%;
+        }
+    }
+
+    // .study-program__card-title
+
+    &__card-title {
+        @extend %text-18;
+        font-weight: 400;
+    }
+
+    // .study-program__card-time
+
+    &__card-time {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 19px;
+        margin: 10px 0 15px;
+        @media (max-width: 575px) {
+            margin: 5px 0 10px;
+        }
+    }
+
+    // .study-program__card-btn
+
+    &__card-btn {
+        width: 100%;
+        padding: 12px;
+        margin-top: 20px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    // .study-program__action
+
+    &__action {
+        background-color: #e6e6e6;
+        border: 1px solid #cbcbcb;
+        margin-top: 40px;
+
+        &--not-complete {
+            padding: 30px 0;
+        }
+
+        &--complete {
+            padding: 44px 15px;
+        }
+    }
+
+    &__action-inner {
+        width: 390px;
+        padding: 0 15px;
+        margin: 0 auto;
+        @extend %flex-col-center;
+        @media (max-width: 575px) {
+            width: 100%;
+        }
+    }
+
+    &__pass-final-test {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 12px;
+        @media (max-width: 575px) {
+            font-size: 12px;
+            line-height: 19px;
+        }
+    }
+
+    // .study-program__action-descr
+
+    &__action-descr {
+        font-size: 14px;
+        line-height: 19px;
+        text-align: center;
+    }
+
+    // .study-program__buttons
+
+    &__buttons {
+        @extend %flex-center;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        @media (max-width: 991px) {
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        a {
+            margin-right: 66px;
+            @media (max-width: 1200px) {
+                margin-right: 30px;
+            }
+            @media (max-width: 991px) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    // .study-program__action-btn
+
+    &__action-btn {
+        padding: 12px;
+    }
+
+    &__download-certificate {
+        width: 324px;
+        @media (max-width: 991px) {
+            width: 48%;
+        }
+        @media (max-width: 500px) {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__wrong-answers {
+        padding-bottom: 9px;
+        text-transform: uppercase;
+        @media (max-width: 991px) {
+            display: table;
+            margin: 0 auto;
+        }
+    }
+
+    &__order-diploma {
+        width: 330px;
+        @media (max-width: 991px) {
+            width: 48%;
+        }
+        @media (max-width: 500px) {
+            width: 100%;
+        }
+    }
+}

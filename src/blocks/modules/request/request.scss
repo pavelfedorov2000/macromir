@@ -1,0 +1,116 @@
+.client-request {
+    // .client-request__body
+
+    &__body {
+        padding-top: 20px;
+    }
+
+    // .client-request__tabs
+
+    &__tabs {
+        @extend %white-bg;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        @media (max-width: 575px) {
+            justify-content: flex-start;
+            overflow-x: scroll;
+            margin-bottom: 35px;
+        }
+    }
+
+    &__tab {
+        @extend %text-12;
+        color: #000;
+    }
+
+    &__tab + &__tab {
+        margin-left: 28px;
+    }
+
+    // .client-request__wrapper
+
+    &__wrapper {
+        display: flex;
+        align-items: flex-start;
+        @media (max-width: 1023px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    // .client-request__aside-filters
+
+    &__aside-filters {
+        width: 227px;
+        padding: 25px 10px;
+    }
+
+    // .client-request__content
+
+    &__content {
+        width: 682px;
+        margin-left: 36px;
+        @media (max-width: 1023px) {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    // .client-request__card
+
+    &__card {
+        padding: 25px 35px 25px 30px;
+        @media (max-width: 575px) {
+            padding: 15px 10px 20px;
+        }
+    }
+
+    &__filter-btn {
+        @media (max-width: 1023px) {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.executor-request {
+    // .executor-request__wrapper
+
+    &__wrapper {
+        padding-top: 35px;
+        @media (max-width: 1023px) {
+            flex-direction: column;
+        }
+    }
+
+    // .executor-request__aside-filters
+
+    &__aside-filters {
+        width: 263px / $container * 100%;
+        padding: 25px 33px 35px 23px;
+    }
+
+    // .executor-request__cards
+
+    &__cards {
+        width: 847px / $container * 100%;
+        @media (max-width: 1023px) {
+            width: 100%;
+            margin-top: 20px;
+        }
+    }
+
+    &__card {
+        padding: 25px 38px;
+        @media (max-width: 575px) {
+            padding: 15px 10px 20px;
+        }
+    }
+
+    &__filter-btn {
+        @media (max-width: 1023px) {
+            margin-bottom: 20px;
+        }
+    }
+}

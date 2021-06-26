@@ -1,0 +1,29 @@
+<div class="card my-study__card">
+    <div class="card__aside">
+        <div class="card__aside-item">+ 5</div>
+        @@include('../../common/_favorite-btn.html')
+        <div class="card__aside-item">90’</div>
+    </div>
+    <header class="card__header">
+        <div class="card__header-info">
+            <div class="card__header-category">Вебинар</div>
+            <h4 class="card__header-title">
+                SMM и социальные сети
+            </h4>
+            <time class="card__info-time" datetime="2021-05-20 12:00">
+                <b>20.05.2021</b>
+                12:00
+            </time>
+        </div>
+        <figure class="card__persone">
+            <img class="card__persone-img" src="img/card-persone.png" alt="Иван Иванов">
+            <figcaption class="card__persone-name">
+                Иван Иванов
+            </figcaption>
+        </figure>
+    </header>
+    @@include('../../common/content/_1.html')
+    <form action="#">
+        <button class="border-btn card__btn card__cancel-btn">Отменить регистрацию</button>
+    </form>
+</div>

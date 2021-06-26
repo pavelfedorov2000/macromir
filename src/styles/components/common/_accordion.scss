@@ -1,0 +1,37 @@
+.accordion {
+    &__item-head {
+        position: relative;
+        background-color: #fff;
+        box-shadow: 0px 0px 10px 1px rgba(184, 184, 184, 0.25);
+        cursor: pointer;
+        @extend %text-18;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 27px;
+            width: 20px;
+            height: 11px;
+            background-image: url('../img/icons/accordion.svg');
+            transition: 0.3s rotate;
+        }
+
+        &--active {
+            &:after {
+                transform: rotate(180deg);
+            }
+        }
+
+        @media (max-width: 575px) {
+            font-size: 16px;
+        }
+    }
+
+    &__item-title {
+        font-weight: 600;
+    }
+
+    &__item-content {
+        display: none;
+    }
+}

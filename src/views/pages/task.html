@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../_head.html', {
+"title": "Задание"
+})
+
+<body>
+
+    <div class="wrapper">
+        <main class="page task-page">
+            <div class="container page__wrapper task-page__wrapper">
+                <div class="task-page__content">
+                    <div class="task-num">
+                        Задание №<span>2345</span>
+                    </div>
+                    <div class="task-info task-page__top-info">
+                        <div class="task-info__left">
+                            <time class="task-datetime" datetime="2021-05-15 12:00">15.05.2021 в 12:00</time>
+                            <span class="task-status task-info__status">на модерации</span>
+                        </div>
+                        <button class="border-btn edit-task task-info__edit">
+                            Редактировать
+                        </button>
+                    </div>
+                    <h1 class="page-title task-page__title">
+                        Продажа дома в садоводстве Рощино
+                    </h1>
+                    <p class="task-page__text">
+                        Дом, баня, участок 6 соток. Рощино. Сам не занимаюсь загородной, готов передать клиенту
+                    </p>
+                    <div class="task-page__table general-info">
+                        <h4 class="general-info__title">
+                            Общая информация
+                        </h4>
+                        <dl class="general-info__list">
+                            <dt>Стоимость</dt>
+                            <dd>2 100 000₽</dd>
+                            <dt>Вознаграждение посреднику</dt>
+                            <dd>10%</dd>
+                            <dt>Адрес</dt>
+                            <dd>Загородная, 26</dd>
+                            <dt>Комнаты</dt>
+                            <dd>2</dd>
+                            <dt>Общая площадь</dt>
+                            <dd>60 кв.м.</dd>
+                            <dt>Этаж</dt>
+                            <dd>3</dd>
+                            <dt>Этажей в доме</dt>
+                            <dd>5</dd>
+                            <dt>Собственность</dt>
+                            <dd>В собственности</dd>
+                        </dl>
+                    </div>
+
+                    <div class="task-page__gallery">
+                        <div class="gallery-slider">
+                            <a data-fancybox="gallery" href="img/gallery-slider.jpg" class="gallery-slider__item">
+                                <img src="img/gallery-slider.jpg" alt="">
+                            </a>
+                            <a data-fancybox="gallery" href="img/gallery-slider.jpg" class="gallery-slider__item">
+                                <img src="img/gallery-slider.jpg" alt="">
+                            </a>
+                            <a data-fancybox="gallery" href="img/gallery-slider.jpg" class="gallery-slider__item">
+                                <img src="img/gallery-slider.jpg" alt="">
+                            </a>
+                            <a data-fancybox="gallery" href="img/gallery-slider.jpg" class="gallery-slider__item">
+                                <img src="img/gallery-slider.jpg" alt="">
+                            </a>
+                            <a data-fancybox="gallery" href="img/gallery-slider.jpg" class="gallery-slider__item">
+                                <img src="img/gallery-slider.jpg" alt="">
+                            </a>
+                            <a data-fancybox="gallery" href="img/gallery-slider.jpg" class="gallery-slider__item">
+                                <img src="img/gallery-slider.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="gallery-thumbs">
+                            <div class="gallery-thumbs__item">
+                                <img src="img/thumbs/1.jpg" alt="">
+                            </div>
+                            <div class="gallery-thumbs__item">
+                                <img src="img/thumbs/2.jpg" alt="">
+                            </div>
+                            <div class="gallery-thumbs__item">
+                                <img src="img/thumbs/3.jpg" alt="">
+                            </div>
+                            <div class="gallery-thumbs__item">
+                                <img src="img/thumbs/4.jpg" alt="">
+                            </div>
+                            <div class="gallery-thumbs__item">
+                                <img src="img/thumbs/5.jpg" alt="">
+                            </div>
+                            <div class="gallery-thumbs__item">
+                                <img src="img/thumbs/1.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="response">
+                        <h2 class="response__title">
+                            Отклик
+                        </h2>
+                        <form class="notify-form" action="#">
+                            <label class="notify-form__label">
+                                <input class="filter-style" type="checkbox" name="email-notify" id="email-notify">
+                                <div class="notify-form__text">
+                                    Уведомлять меня о новых предложениях к заданию по e-mail:<br>
+                                    <span class="user-email"></span>
+                                </div>
+                            </label>
+                        </form>
+
+                        <div class="tabs response__tabs tabs--bb">
+                            <a href="#response-tab-1" class="tab response__tab tab--active">
+                                Не определен
+                                <span>1</span>
+                            </a>
+                            <a href="#response-tab-2" class="tab response__tab">
+                                Отказал
+                                <span>0</span>
+                            </a>
+                            <a href="#response-tab-3" class="tab response__tab">
+                                Кандидат
+                                <span>1</span>
+                            </a>
+                            <a href="#response-tab-4" class="tab response__tab">
+                                Исполнитель
+                                <span>0</span>
+                            </a>
+                            <a href="#response-tab-5" class="tab response__tab">
+                                Спам
+                                <span>0</span>
+                            </a>
+                        </div>
+
+                        <div id="response-tab-1" class="tabs-content tabs-content--active">
+                            <form class="task-page__sort sort-form" action="#">
+                                Сортировать по:
+                                <div class="sort-form__items">
+                                    <label class="sort-form__item">
+                                        рейтингу
+                                        <input class="filter-style" type="radio" name="sort" id="rating-sort">
+                                    </label>
+                                    <label class="sort-form__item">
+                                        отзывам
+                                        <input class="filter-style" type="radio" name="sort" id="reviews-sort">
+                                    </label>
+                                    <label class="sort-form__item">
+                                        времени
+                                        <input class="filter-style" type="radio" name="sort" id="time-sort" checked>
+                                    </label>
+                                </div>
+                            </form>
+
+                            @@include('../../blocks/modules/executor/_executor-card.html')
+                        </div>
+                        <div id="response-tab-2" class="tabs-content">
+                            В данной категории нет откликов
+                        </div>
+                        <div id="response-tab-3" class="tabs-content">
+                            В данной категории нет откликов
+                        </div>
+                        <div id="response-tab-4" class="tabs-content">
+                            В данной категории нет откликов
+                        </div>
+                        <div id="response-tab-5" class="tabs-content">
+                            В данной категории нет откликов
+                        </div>
+                    </div>
+                </div>
+                <aside class="task-page__aside">
+                    <div class="customer task-page__customer" data-da=".task-page__content, 991, 2">
+                        <h3 class="customer__title">
+                            Заказчик этого задания
+                        </h3>
+                        <div class="customer__inner">
+                            <img class="customer__img" src="img/customer.jpg" alt="Фото заказчика задания">
+                            <div class="customer__info">
+                                <div class="customer__name">
+                                    Андрей
+                                </div>
+                                <div class="customer__reviews">
+                                    Отзывы:
+                                    <span>2</span>
+                                </div>
+                                <address class="customer__contacts">
+                                    <a href="tel:+ 74954554545" class="customer__contacts-link">
+                                        + 7 (495) 455 45 45
+                                    </a>
+                                    <a href="mailto:andrey.gavrilov75@gmail.com"
+                                        class="customer__contacts-link customer__email">
+                                        andrey.gavrilov75@gmail.com
+                                    </a>
+                                </address>
+                            </div>
+                        </div>
+                    </div>
+                    @@include('../../blocks/modules/aside-faq/_aside-faq.html')
+                </aside>
+            </div>
+        </main>
+
+        @@include('../../blocks/modules/popups/_popups.html')
+    </div>
+
+    @@include('../_js.html')
+
+</body>
+
+</html>

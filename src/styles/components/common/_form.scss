@@ -1,0 +1,28 @@
+.form {
+    &__label {
+        display: block;
+        @extend %text-18;
+        margin-bottom: 4px;
+    }
+    &__input {
+        padding-top: 7px;
+        padding-bottom: 7px;
+        border: 1px solid #e5e5e5;
+        height: 40px;
+        @extend %vertical-align;
+        @extend %text-16;
+    }
+    &__textarea {
+        //padding-top: 7px;
+    }
+    &__agreement {
+        @extend %text-14;
+        a {
+            color: $accent;
+        }
+    }
+    &__btn {
+        width: 100%;
+        padding: 14px;
+    }
+}

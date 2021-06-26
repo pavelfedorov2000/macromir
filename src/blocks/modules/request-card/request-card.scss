@@ -1,0 +1,93 @@
+.request-card {
+    @extend %white-bg;
+    // .request-card__datetime
+
+    &__datetime {
+        display: block;
+        @extend %text-14;
+        padding-bottom: 6px;
+        border-bottom: 1px solid #e5e5e5;
+        margin-bottom: 15px;
+    }
+
+    // .request-card__title
+
+    &__title {
+        @extend %text-20;
+        font-weight: 700;
+        margin-bottom: 6px;
+        @media (max-width: 575px) {
+            font-size: 18px;
+            line-height: 25px;
+        }
+    }
+
+    // .request-card__text
+
+    &__text {
+        @extend %text-18;
+        @media (max-width: 575px) {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+
+    // .request-card__price
+
+    &__price {
+        @extend %text-18;
+        font-weight: 600;
+        margin: 25px 0 30px;
+        @media (max-width: 575px) {
+            margin: 10px 0 20px;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        @media (max-width: 575px) {
+            flex-direction: column;
+        }
+    }
+
+    &__btn + &__btn {
+        margin-left: 30px;
+        @media (max-width: 575px) {
+            margin-left: 0;
+            margin-top: 20px;
+        }
+    }
+
+    &__btn {
+        display: inline-block;
+        @extend %text-16;
+        padding: 9px;
+        &--shorter {
+            width: 165px;
+            @media (max-width: 575px) {
+                width: 100%;
+            }
+        }
+        &--longer {
+            width: 262px;
+            @media (max-width: 575px) {
+                width: 100%;
+            }
+        }
+    }
+
+    form {
+        margin-left: 30px;
+        @media (max-width: 575px) {
+            margin-left: 0;
+            margin-top: 20px;
+        }
+    }
+}
+
+.request-card + .request-card {
+    margin-top: 30px;
+    @media (max-width: 575px) {
+        margin-top: 25px;
+    }
+}

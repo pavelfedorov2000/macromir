@@ -1,0 +1,462 @@
+.questionary-page {
+    // .questionary-page__wrapper
+
+    &__wrapper {
+        padding-top: 70px;
+        @media (max-width: 575px) {
+            padding-top: 32px;
+        }
+    }
+
+    // .questionary-page__aside
+
+    &__aside {
+        width: 460px / $container * 100%;
+        @media (max-width: 991px) {
+            display: none;
+        }
+    }
+}
+
+.questionary {
+    width: 555px / $container * 100%;
+    @media (max-width: 991px) {
+        width: 100%;
+    }
+    // .questionary__title
+
+    &__title {
+        font-weight: bold;
+        font-size: 30px;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+        @media (max-width: 575px) {
+            font-size: 26px;
+            line-height: 34px;
+            margin-bottom: 15px;
+        }
+    }
+
+    // .questionary__text
+
+    &__text {
+        font-size: 18px;
+        line-height: 23px;
+        @media (max-width: 575px) {
+            font-size: 16px;
+            line-height: 21px;
+        }
+    }
+
+    &__form {
+        margin-top: 85px;
+        @media (max-width: 575px) {
+            margin-top: 50px;
+        }
+    }
+}
+
+.questionary-form {
+    // .questionary-form__step
+
+    &__step {
+        position: relative;
+        border-top: 2px solid $accent;
+        //padding-top: 55px;
+    }
+
+    &__step + &__step {
+        margin-top: 60px;
+        @media (max-width: 575px) {
+            margin-top: 40px;
+        }
+    }
+
+    // .questionary-form__step-title
+
+    &__step-title {
+        position: absolute;
+        display: flex;
+        @extend %pos-center-x;
+        top: -14px;
+        background-color: #fff;
+        padding: 0 25px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 23px;
+        @media (max-width: 575px) {
+            justify-content: space-between;
+            width: 270px;
+        }
+        span {
+            display: inline-block;
+            color: $accent;
+            white-space: nowrap;
+            margin-left: 3px;
+            @media (max-width: 575px) {
+                white-space: normal;
+                max-width: 136px;
+            }
+        }
+    }
+
+    &__step-num {
+        white-space: nowrap;
+    }
+
+    // .questionary-form__item
+
+    &__item {
+        margin-bottom: 60px;
+        @media (max-width: 575px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__radio-item {
+        margin-top: 55px;
+        @media (max-width: 575px) {
+            margin-top: 45px;
+        }
+        .jq-radio {
+            @extend %flex-center;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            border: 1px solid #333333;
+            background: transparent;
+            box-shadow: none;
+            &__div {
+                margin: 0;
+                transform: rotate(0deg);
+                background: transparent;
+                box-shadow: none;
+            }
+            &.checked {
+                border-color: $accent;
+                .jq-radio__div {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        .jq-radio.checked .jq-radio {
+            &__div {
+                background: $accent;
+                margin: 0;
+                box-shadow: none;
+            }
+        }
+    }
+
+    // .questionary-form__radio-label
+
+    &__radio-label {
+        @extend %vertical-align;
+        @extend %text-18;
+        cursor: pointer;
+        .jq-radio {
+            margin-right: 16px;
+        }
+    }
+
+    &__radio-label + &__radio-label {
+        margin-top: 10px;
+    }
+
+    // .questionary-form__row-selects
+
+    &__selects {
+        grid-gap: 30px;
+
+        &--row {
+            grid-template-columns: repeat(3, 1fr);
+            @media (max-width: 575px) {
+                grid-template-columns: 100%;
+                grid-gap: 24px;
+            }
+        }
+    }
+
+    // .questionary-form__input
+
+    &__input {
+        padding: 5px 10px;
+        &::placeholder {
+            color: #979797;
+            @extend %text-18;
+        }
+        &--block {
+            width: 100%;
+        }
+    }
+
+    // .questionary-form__textarea
+
+    &__textarea {
+        padding: 10px;
+        width: 100%;
+        align-items: flex-start;
+        min-height: 80px;
+    }
+
+    &__price-inputs {
+        label + label {
+            margin-left: 28px;
+            @media (max-width: 575px) {
+                margin-left: 0;
+            }
+        }
+        @media (max-width: 575px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 15px;
+        }
+    }
+
+    &__price-input {
+        display: inline-block;
+        width: 166px;
+        @media (max-width: 575px) {
+            width: 100%;
+        }
+    }
+
+    // .questionary-form__item-title
+
+    &__item-title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 23px;
+        margin-bottom: 8px;
+        &--drop {
+            position: relative;
+            padding-right: 34px;
+            margin-bottom: 13px;
+            cursor: pointer;
+            &:after {
+                content: '';
+                position: absolute;
+                top: 7px;
+                right: 0;
+                width: 20px;
+                height: 11px;
+                background-image: url('../img/icons/accordion.svg');
+                transition: 0.3s rotate;
+            }
+        }
+        &--active {
+            &:after {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    // .questionary-form__subtitle
+
+    &__subtitle {
+        font-size: 16px;
+        line-height: 22px;
+        opacity: 0.7;
+    }
+
+    &__hidden-fields {
+        display: none;
+    }
+
+    // .questionary-form__fields
+
+    &__additional-fields {
+        grid-template-columns: repeat(6, 1fr);
+        margin-top: 30px;
+        @media (max-width: 575px) {
+            grid-template-columns: 100%;
+        }
+    }
+
+    &__additional-field {
+        grid-column: span 2;
+        @media (max-width: 575px) {
+            grid-column: span 1;
+        }
+        &:nth-child(10),
+        &:nth-child(11) {
+            grid-column: span 3;
+            @media (max-width: 575px) {
+                grid-column: span 1;
+            }
+        }
+    }
+
+    // .questionary-form__register
+
+    &__register-action {
+        margin: 33px 0 43px;
+    }
+
+    &__register-text {
+        margin: 27px 0;
+        @media (max-width: 575px) {
+            margin: 100px 0 30px;
+        }
+    }
+
+    // .questionary-form__inputs
+
+    &__inputs {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 17px 30px;
+        @media (max-width: 575px) {
+            grid-template-columns: 100%;
+            grid-gap: 30px;
+        }
+    }
+
+    // .questionary-form__action
+
+    &__action {
+        @extend %vertical-align;
+        &--sb {
+            justify-content: space-between;
+            @media (max-width: 575px) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .questionary-form__action-btn {
+                @media (max-width: 575px) {
+                    margin-left: 0;
+                    margin-top: 10px;
+                }
+            }
+        }
+        @media (max-width: 374px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__action-question {
+        @extend %text-18;
+    }
+
+    &__action-buttons {
+        display: flex;
+        width: 100%;
+        @media (max-width: 575px) {
+            justify-content: space-between;
+        }
+        @media (max-width: 374px) {
+            flex-direction: column;
+        }
+    }
+
+    // .questionary-form__action-btn
+
+    &__action-btn {
+        font-weight: 600;
+        @extend %text-16;
+        text-align: left;
+        border-bottom: 1px dashed $accent;
+        margin-left: 10px;
+        transition: 0.3s color;
+        &:hover {
+            color: $accent;
+        }
+    }
+
+    &__action-btn + &__action-btn {
+        margin-left: auto;
+        @media (max-width: 575px) {
+            margin-left: 0;
+        }
+    }
+
+    // .questionary-form__enter
+
+    &__enter {
+        display: none;
+    }
+
+    &__enter-action {
+        margin: 25px 0 38px;
+    }
+
+    // .questionary-form__btn
+
+    &__btn {
+        @extend %text-16;
+        margin-bottom: 20px;
+    }
+
+    &__password-recovery {
+        display: none;
+        position: relative;
+        padding: 27px 15px 13px;
+        margin-bottom: 40px;
+        @media (max-width: 575px) {
+            padding: 36px 15px 26px;
+        }
+    }
+}
+
+.password-recovery {
+    @extend %white-bg;
+    &__close {
+        position: absolute;
+        top: 13px;
+        right: 15px;
+        width: 16px;
+        height: 16px;
+        background-image: url(../img/icons/close.svg);
+    }
+    // .password-recovery__title
+
+    &__title {
+        font-weight: 600;
+        @extend %text-18;
+        margin-bottom: 14px;
+    }
+
+    // .password-recovery__form
+
+    &__form {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+        margin-bottom: 17px;
+        @media (max-width: 575px) {
+            grid-template-columns: 100%;
+            grid-gap: 22px;
+            margin-bottom: 14px;
+        }
+    }
+
+    // .password-recovery__form-input
+
+    &__form-input {
+        padding: 7px 13px;
+    }
+
+    // .password-recovery__form-btn
+
+    &__form-btn {
+        padding: 8px;
+        @extend %text-16;
+    }
+
+    // .password-recovery__info-text
+
+    &__info-text {
+        display: block;
+        @extend %text-14;
+        opacity: 0.7;
+    }
+
+    &__success {
+        @extend %text-16;
+        span {
+            font-weight: 600;
+        }
+    }
+}

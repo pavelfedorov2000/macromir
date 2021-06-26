@@ -1,0 +1,301 @@
+.card {
+    position: relative;
+    z-index: 99;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px 1px rgba(184, 184, 184, 0.25);
+    @extend %flex-col;
+
+    &:hover {
+        .card {
+            &__header {
+                border-top-color: $accent;
+                border-left-color: $accent;
+                border-right-color: $accent;
+            }
+
+            &__content {
+                border-left-color: $accent;
+                border-right-color: $accent;
+            }
+
+            &__aside {
+                border-top-color: $accent;
+                border-right-color: $accent;
+            }
+        }
+    }
+
+    &.favorite {
+        .card__favorite-btn svg path {
+            fill: $accent;
+            stroke-opacity: 1;
+        }
+    }
+
+    &--without-button {
+        border-bottom: 1px solid transparent;
+        transition: 0.3s border-bottom-color;
+
+        &:hover {
+            border-bottom-color: $accent;
+        }
+    }
+
+    // .card__aside
+
+    &__aside {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0 4.5px;
+        background-color: #fff;
+        border-top: 1px solid transparent;
+        border-right: 1px solid transparent;
+        transition: 0.3s border-color;
+    }
+
+    // .card__aside-item
+
+    &__aside-item {
+        height: 37px;
+        @extend %flex-center;
+    }
+
+    &__aside-item+&__aside-item {
+        border-top: 1px solid #e5e5e5;
+    }
+
+    // .card__favorite-btn
+
+    &__favorite-btn {
+        position: relative;
+        z-index: 100;
+
+        svg {
+            width: 19px;
+            height: 18px;
+
+            path {
+                transition: 0.3s all;
+            }
+        }
+
+        &:hover {
+            svg path {
+                stroke-opacity: 1;
+            }
+        }
+    }
+
+    &__delete-btn {
+        svg {
+            width: 15px;
+            height: 16px;
+
+            path {
+                transition: 0.3s fill-opacity;
+            }
+        }
+
+        &:hover {
+            svg path {
+                fill-opacity: 1;
+            }
+        }
+    }
+
+    // .card__header
+
+    &__header {
+        min-height: 173px;
+        @extend %flex-row;
+        background-color: #f7f7f7;
+        padding-top: 9px;
+        border: 1px solid transparent;
+        border-bottom-color: #e5e5e5;
+        transition: 0.3s border;
+    }
+
+    // .card__header-info
+
+    &__header-info {
+        @extend %flex-col;
+        justify-content: space-between;
+        width: 131px;
+        max-width: 47%;
+        padding-left: 20px;
+        padding-bottom: 10px;
+    }
+
+    // .card__header-category
+
+    &__header-category {
+        @extend %text-12;
+        margin-bottom: 25px;
+    }
+
+    // .card__header-title
+
+    &__header-title {
+        position: relative;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 20px;
+        text-transform: uppercase;
+        color: $accent;
+        margin-bottom: auto;
+    }
+
+    // .card__info-time
+
+    &__info-time {
+        position: relative;
+        padding-top: 7px;
+        @extend %text-12;
+        flex-shrink: 0;
+
+        b {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60px;
+            height: 1px;
+            background-color: $accent;
+        }
+    }
+
+    &__persone {
+        width: 156px;
+        max-width: 53%;
+        flex-shrink: 0;
+        align-self: flex-end;
+
+        @media (max-width: 520px) {
+            width: 162px;
+        }
+    }
+
+    &__persone-name {
+        width: 100%;
+        background-color: #fff;
+        padding: 5px 16px;
+        @extend %text-12;
+        white-space: nowrap;
+    }
+
+    // .card__content
+
+    &__content {
+        @extend %flex-col;
+        flex-grow: 1;
+        padding: 12px 18px 19px;
+        border: 1px solid transparent;
+        transition: 0.3s border;
+    }
+
+    // .card__title
+
+    &__title {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 18px;
+        color: #000;
+        padding-bottom: 12px;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #e6e6e6;
+        flex-grow: 1;
+        transition: .3s color;
+
+        &:hover {
+            color: $accent;
+        }
+    }
+
+    // .card__text
+
+    &__text {
+        @extend %text-12;
+        margin-bottom: 29px;
+    }
+
+    // .card__price
+
+    &__price {
+        position: relative;
+        @extend %vertical-align;
+        font-weight: 600;
+        @extend %text-16;
+        text-transform: uppercase;
+    }
+
+    &__old-price {
+        &:before {
+            top: 2px;
+            left: 0;
+        }
+    }
+
+    &__new-price {
+        font-weight: 700;
+        margin-left: 15px;
+    }
+
+    &__question-btn {
+        width: 19px;
+        height: 19px;
+        border-radius: 50%;
+        border: 1px solid $black;
+        opacity: 0.3;
+        @extend %flex-center;
+        font-weight: 600;
+        @extend %text-12;
+        text-transform: uppercase;
+        text-align: center;
+        margin-left: 14px;
+    }
+
+    &__partner-price {
+        display: none;
+        position: absolute;
+        top: 17px;
+        left: -78px;
+        z-index: 100;
+        background-color: #fff;
+        box-shadow: -1px 1px 10px rgba(184, 184, 184, 0.25);
+        padding: 14px;
+        @extend %text-16;
+        text-align: center;
+
+        @media (max-width: 1023px) {
+            left: 0;
+        }
+    }
+
+    // .card__btn
+
+    &__btn {
+        width: 100%;
+        margin-top: auto;
+    }
+
+    &--partners-available {
+        .card__btn {
+            background-color: #b5b5b5;
+            box-shadow: 0px 5px 10px rgba(184, 184, 184, 0.25);
+            border: none;
+
+            &:hover {
+                background-color: #b5b5b5;
+                border: none;
+                color: #fff;
+            }
+        }
+    }
+}

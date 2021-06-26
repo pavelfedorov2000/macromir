@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../_head.html', {
+"title": "Анкета"
+})
+
+<body>
+
+    <div class="wrapper">
+
+        <main class="page">
+            <section class="steps expert-search">
+                <div class="container">
+                    <h1 class="page-title steps__title">
+                        Ищите надёжного эксперта?
+                    </h1>
+                    @@include('../../blocks/modules/steps/_steps.html')
+                </div>
+            </section>
+
+            <div class="container page__wrapper questionary-page__wrapper">
+                <section class="questionary">
+                    <h2 class="questionary__title">
+                        Заявка на поиск агента
+                    </h2>
+                    <p class="questionary__text">
+                        Оставьте заявку на аренду, покупку или продажу недвижимости и получите более 15 предложений о
+                        сотрудничестве от агентов
+                        вашего города в течение 10 минут. Выберите того, кто сделает лучшее предложение!
+                    </p>
+
+                    <form class="form questionary__form questionary-form" action="#">
+                        <div class="questionary-form__step">
+                            <h4 class="questionary-form__step-title">
+                                <div class="questionary-form__step-num">Этап 1.</div>
+                                <span style="white-space: nowrap;">Опишите задачу</span>
+                            </h4>
+                            <div class="questionary-form__item questionary-form__radio-item">
+                                <label class="questionary-form__radio-label">
+                                    <input class="filter-style" type="radio" name="i-am" checked>
+                                    Я клиент
+                                </label>
+                                <label class="questionary-form__radio-label">
+                                    <input class="filter-style" type="radio" name="i-am">
+                                    Я посредник
+                                </label>
+                            </div>
+                            <div
+                                class="questionary-form__item questionary-form__selects grid questionary-form__selects--row">
+                                <select class="filter-style" name="apartment-action" id="apartment-action">
+                                    <option value="sell">Продать</option>
+                                    <option value="buy">Купить</option>
+                                    <option value="rent">Сдать</option>
+                                    <option value="get">Снять</option>
+                                </select>
+                                <select class="filter-style" name="apartment-object" id="apartment-object">
+                                    <option value="flat">Квартиру</option>
+                                    <option value="room">Комнату</option>
+                                    <option value="house">Дом</option>
+                                </select>
+                                <select class="filter-style" name="apartment-place" id="apartment-place">
+                                    <option value="moscow">В Москве</option>
+                                    <option value="moscow">В Москве</option>
+                                    <option value="moscow">В Москве</option>
+                                </select>
+                            </div>
+                            <fieldset class="questionary-form__item">
+                                <legend class="questionary-form__item-title">
+                                    Заголовок объявления
+                                </legend>
+                                <label>
+                                    <input class="form__input questionary-form__input questionary-form__input--block"
+                                        id="headline" name="headline" placeholder="Краткое описание темы"></input>
+                                </label>
+                            </fieldset>
+                            <fieldset class="questionary-form__item">
+                                <legend class="questionary-form__item-title">
+                                    Текст объявления
+                                </legend>
+                                <label>
+                                    <textarea class="form__input questionary-form__input questionary-form__textarea"
+                                        id="announcement-text" name="announcement-text"
+                                        placeholder="Дополнительные характеристики, пожелания, требования"></textarea>
+                                </label>
+                            </fieldset>
+                            <input class="filter-style questionary-form__item" type="file"
+                                data-placeholder="Прикрепить файл или фото">
+                            <fieldset class="questionary-form__item">
+                                <legend class="questionary-form__item-title">
+                                    Стоимость (₽)
+                                </legend>
+                                <div class="questionary-form__price-inputs">
+                                    <label>
+                                        <input class="form__input questionary-form__input questionary-form__price-input"
+                                            name="price-from" placeholder="от 10 000"></input>
+                                    </label>
+                                    <label>
+                                        <input class="form__input questionary-form__input questionary-form__price-input"
+                                            name="price-percent" placeholder="3% от стоимости"></input>
+                                    </label>
+                                </div>
+                            </fieldset>
+
+                            <fieldset class="questionary-form__item">
+                                <legend class="questionary-form__item-title questionary-form__item-title--drop">
+                                    Дополнительные параметры
+                                </legend>
+                                <div class="questionary-form__hidden-fields">
+                                    <div class="questionary-form__subtitle">
+                                        Более подробная информация поможет быстрее найти эксперта
+                                    </div>
+                                    <div class="questionary-form__selects questionary-form__additional-fields grid">
+                                        <div class="questionary-form__additional-field">
+                                            <label for="street"
+                                                class="form__label questionary-form__label">Улица</label>
+                                            <select class="filter-style" name="street" id="street">
+                                                <option value="">Ленина</option>
+                                                <option value="">Ленина</option>
+                                                <option value="">Ленина</option>
+                                            </select>
+                                        </div>
+                                        <div class="questionary-form__additional-field">
+                                            <label for="house-number" class="form__label questionary-form__label">Номер
+                                                дома</label>
+                                            <select class="filter-style" name="house-number" id="house-number">
+                                                <option value="">27</option>
+                                                <option value="">27</option>
+                                                <option value="">27</option>
+                                            </select>
+                                        </div>
+                                        <div class="questionary-form__additional-field">
+                                            <label for="floor" class="form__label questionary-form__label">Этаж</label>
+                                            <select class="filter-style" name="floor" id="floor">
+                                                <option value="">7</option>
+                                                <option value="">7</option>
+                                                <option value="">7</option>
+                                            </select>
+                                        </div>
+                                        <div class="questionary-form__additional-field">
+                                            <label for="rooms-amount" class="form__label questionary-form__label">Кол-во
+                                                комнат</label>
+                                            <select class="filter-style" name="rooms-amount" id="rooms-amount">
+                                                <option value="">3</option>
+                                                <option value="">3</option>
+                                                <option value="">3</option>
+                                            </select>
+                                        </div>
+                                        <div class="questionary-form__additional-field">
+                                            <label for="total-area" class="form__label questionary-form__label">Общая
+                                                площадь</label>
+                                            <select class="filter-style" name="total-area" id="total-area">
+                                                <option value="">70 кв.м.</option>
+                                                <option value="">70 кв.м.</option>
+                                                <option value="">70 кв.м.</option>
+                                            </select>
+                                        </div>
+                                        <div class="questionary-form__additional-field">
+                                            <label for="living-space" class="form__label questionary-form__label">Жилая
+                                                площадь</label>
+                                            <select class="filter-style" name="living-space" id="living-space">
+                                                <option value="">65 кв.м.</option>
+                                                <option value="">65 кв.м.</option>
+                                                <option value="">65 кв.м.</option>
+                                            </select>
+                                        </div>
+                                        <div class="questionary-form__additional-field">
+                                            <label for="kitchen-area"
+                                                class="form__label questionary-form__label">Площадь
+                                                кухни</label>
+                                            <select class="filter-style" name="kitchen-area" id="kitchen-area">
+                                                <option value="">15 кв.м.</option>
+                                                <option value="">15 кв.м.</option>
+                                                <option value="">15 кв.м.</option>
+                                            </select>
+                                        </div>
+                                        <div class="questionary-form__additional-field">
+                                            <label for="storage"
+                                                class="form__label questionary-form__label">Этажность</label>
+                                            <select class="filter-style" name="storage" id="storage">
+                                                <option value="">12</option>
+                                                <option value="">12</option>
+                                                <option value="">12</option>
+                                            </select>
+                                        </div>
+                                        <div class="questionary-form__additional-field">
+                                            <label for="construction-year"
+                                                class="form__label questionary-form__label">Год
+                                                постройки</label>
+                                            <select class="filter-style" name="construction-year"
+                                                id="construction-year">
+                                                <option value="">2010</option>
+                                                <option value="">2010</option>
+                                                <option value="">2010</option>
+                                            </select>
+                                        </div>
+                                        <div class="questionary-form__additional-field">
+                                            <label for="condition"
+                                                class="form__label questionary-form__label">Состояние</label>
+                                            <select class="filter-style" name="condition" id="condition">
+                                                <option value="">Отличное</option>
+                                                <option value="">Отличное</option>
+                                                <option value="">Отличное</option>
+                                            </select>
+                                        </div>
+                                        <div class="questionary-form__additional-field">
+                                            <label for="ownership"
+                                                class="form__label questionary-form__label">Собственность</label>
+                                            <select class="filter-style" name="ownership" id="ownership">
+                                                <option value="">В собственности</option>
+                                                <option value="">В собственности</option>
+                                                <option value="">В собственности</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="questionary-form__step">
+                            <h4 class="questionary-form__step-title questionary-form__step--2">
+                                <div class="questionary-form__step-num">Этап 2.</div>
+                                <span>Добавьте информацию о себе</span>
+                            </h4>
+                            <div class="questionary-form__subtitle questionary-form__register-text">
+                                После регистрации вы получите доступ к откликам экспертов
+                            </div>
+                            <div class="questionary-form__register">
+                                <div class="questionary-form__inputs grid">
+                                    <input class="form__input questionary-form__input" type="text" placeholder="Имя">
+                                    <input class="form__input questionary-form__input" type="tel" placeholder="Телефон">
+                                    <input class="form__input questionary-form__input" name="user_email" type="email"
+                                        placeholder="E-mail">
+                                </div>
+                                <div class="questionary-form__action questionary-form__register-action">
+                                    <div class="questionary-form__action-question">
+                                        Уже зарегистрированы?
+                                    </div>
+                                    <button id="enter" class="questionary-form__action-btn" type="button">
+                                        Войдите
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="questionary-form__enter">
+                                <div class="questionary-form__inputs grid">
+                                    <input class="form__input questionary-form__input" name="user_email" type="email"
+                                        placeholder="E-mail">
+                                    <input class="form__input questionary-form__input" type="password"
+                                        placeholder="Пароль">
+                                </div>
+                                <div
+                                    class="questionary-form__action questionary-form__enter-action questionary-form__action--sb">
+                                    <div class="questionary-form__action-question">
+                                        Не зарегистрированы?
+                                    </div>
+                                    <button id="register" class="questionary-form__action-btn" type="button">
+                                        Зарегистрируйтесь
+                                    </button>
+                                    <button id="forgot-password" class="questionary-form__action-btn" type="button">
+                                        Забыли пароль?
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="questionary-form__password-recovery password-recovery">
+                                <button class="password-recovery__close" type="button"></button>
+                                <h4 class="password-recovery__title">
+                                    Восстановление пароля
+                                </h4>
+                                <div class="form password-recovery__form grid" action="#">
+                                    <input class="form__input questionary-form__input password-recovery__form-input"
+                                        type="email" name="recovery_email" placeholder="E-mail" required>
+                                    <button class="border-btn password-recovery__form-btn" type="submit">
+                                        отправить
+                                    </button>
+                                </div>
+                                <small class="password-recovery__info-text">
+                                    Мы отправим вам письмо для восстановления пароля на указанный адрес
+                                </small>
+                            </div>
+                            <button class="btn form__btn questionary-form__btn" type="submit">
+                                опубликовать
+                            </button>
+                            <small class="form__agreement questionary-form__agreement">
+                                Отправляя заявку, вы даете согласие на <a href="#">обработку персональных данных</a>
+                            </small>
+                        </div>
+                    </form>
+                </section>
+                <aside class="questionary-page__aside">
+                    @@include('../../blocks/modules/aside-faq/_aside-faq.html')
+                </aside>
+            </div>
+        </main>
+
+        @@include('../../blocks/modules/popups/_popups.html')
+    </div>
+
+    @@include('../_js.html')
+
+</body>
+
+</html>

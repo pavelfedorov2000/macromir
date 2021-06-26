@@ -1,0 +1,201 @@
+.register-popup {
+    width: 780px;
+    min-height: 700px;
+
+    @media (max-width: 767px) {
+        padding: 40px 15px;
+    }
+
+    &__img {
+        width: 323px;
+    }
+
+    &__content {
+        width: calc(100% - 323px);
+        padding: 42px 0 35px;
+        @media (max-width: 767px) {
+            width: 100%;
+            padding: 0;
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        @extend %text-20;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+        @media (max-width: 767px) {
+            margin-bottom: 30px;
+        }
+        @media (max-width: 575px) {
+            font-size: 18px;
+            line-height: 25px;
+        }
+    }
+
+    &__form-item + &__form-item {
+        margin-top: 15px;
+        @media (max-width: 767px) {
+            margin-top: 19px;
+        }
+    }
+
+    &__form-label {
+        @media (max-width: 575px) {
+            font-size: 14px;
+            line-height: 19px;
+            margin-bottom: 1px;
+        }
+    }
+
+    &__form-tabs {
+        @extend %flex-row;
+        padding-bottom: 3px;
+        margin-top: 24px;
+        @media (max-width: 575px) {
+            margin-top: 35px;
+        }
+    }
+
+    &__form-tab {
+        display: inline-block;
+        @extend %text-16;
+        text-transform: uppercase;
+        color: $accent;
+        &--active {
+            &:after {
+                bottom: -3px;
+            }
+        }
+        @media (max-width: 575px) {
+            font-size: 14px;
+            line-height: 19px;
+        }
+    }
+
+    &__tabs-content {
+        margin-top: 14px;
+        @media (max-width: 767px) {
+            margin-top: 20px;
+        }
+        p {
+            @extend %text-18;
+            @media (max-width: 575px) {
+                font-size: 14px;
+                line-height: 19px;
+            }
+            span {
+                position: relative;
+                &:after {
+                    content: url(../img/icons/coin.svg);
+                    position: absolute;
+                    @extend %pos-center-y;
+                }
+                &:nth-child(1) {
+                    padding-right: 13px;
+                    &:after {
+                        right: 0;
+                    }
+                }
+                &:nth-child(2) {
+                    &:after {
+                        right: -13px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__bonuses-label {
+        margin: 35px 0 15px;
+        @media (max-width: 575px) {
+            font-size: 14px;
+            line-height: 19px;
+        }
+    }
+
+    &__bonuses-wrap {
+        @extend %flex-row;
+        @media (max-width: 575px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 10px;
+        }
+    }
+
+    &__bonuses-input {
+        width: 243px;
+        @media (max-width: 767px) {
+            height: 40px;
+        }
+        @media (max-width: 575px) {
+            width: 100%;
+        }
+        &--invalid {
+            border-color: #ff0000;
+        }
+    }
+
+    &__bonuses-btn {
+        width: 98px;
+        height: 40px;
+        @extend %text-14;
+        @media (max-width: 575px) {
+            width: 100%;
+        }
+        &--success {
+            color: #a4a4a4;
+            border: 1px solid #a4a4a4;
+            &:hover {
+                background-color: transparent;
+                color: #a4a4a4;
+                border-color: #a4a4a4;
+            }
+        }
+    }
+
+    &__form-btn {
+        margin: 29px 0 15px;
+    }
+
+    &__success {
+        @extend %flex-col-center;
+        text-align: center;
+        display: none;
+        width: 308px;
+    }
+
+    &__success-title {
+        font-weight: 600;
+        @extend %text-18;
+        margin-bottom: 18px;
+    }
+
+    &__success-text {
+        @extend %text-16;
+        margin-bottom: 55px;
+    }
+
+    &__success-btn {
+        width: 264px;
+    }
+}
+
+.bonus-error {
+    display: inline-block;
+    font-weight: 600;
+    @extend %text-14;
+    color: #ff0000;
+    position: relative;
+    padding-right: 17px;
+    &:after {
+        content: '';
+        position: absolute;
+        @extend %pos-center-y;
+        right: 0;
+        width: 12px;
+        height: 12px;
+        background-image: url(../img/icons/coin.svg);
+    }
+}

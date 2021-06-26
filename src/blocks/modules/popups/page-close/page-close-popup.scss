@@ -1,0 +1,35 @@
+.page-close-popup {
+    text-align: center;
+    padding: 48px 30px 55px;
+    // .page-close-popup__title
+
+    &__title {
+        font-size: 30px;
+        line-height: 39px;
+        font-weight: 700;
+        margin-bottom: 18px;
+    }
+
+    // .page-close-popup__question
+
+    &__question {
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 39px;
+    }
+
+    // .page-close-popup__buttons
+
+    &__buttons {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+
+    // .page-close-popup__btn
+
+    &__btn {
+        font-size: 16px;
+        line-height: 21px;
+        padding: 9px;
+    }
+}

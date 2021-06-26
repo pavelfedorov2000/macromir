@@ -1,0 +1,38 @@
+.copmlain-popup {
+    width: 615px;
+    padding: 40px 57px;
+    @media (max-width: 767px) {
+        padding: 35px 20px 23px;
+    }
+    // .copmlain-popup__title
+
+    &__title {
+        font-weight: 700;
+        line-height: 28px;
+        text-align: left;
+        margin-bottom: 15px;
+        @media (max-width: 767px) {
+            font-size: 26px;
+        }
+    }
+
+    // .copmlain-popup__subtitle
+
+    &__subtitle {
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 30px;
+        @media (max-width: 575px) {
+            font-size: 16px;
+            line-height: 21px;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__textarea {
+        margin-bottom: 20px;
+        @media (max-width: 575px) {
+            margin-bottom: 15px;
+        }
+    }
+}
